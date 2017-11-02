@@ -1,32 +1,477 @@
 {% load staticfiles %}
-<html>
-    <head>
-        <title>Блог Тараса</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-        </head>
-    <body>
-        <div class="page-header">
-            <h1><a href="/">Блог Тараса</a></h1>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<!--
+	Bent - Bootstrap Landing Page Template by Dcrazed
+	Site: https://dcrazed.com/bent-app-landing-page-template/
+	Free for personal and commercial use under GNU GPL 3.0 license.
+-->
 
-        <div class="content container">
-    <div class="row">
-        <div class="col-md-8">
-            {% for post in posts %}
-                <div class="post">
-                    <div class="date">
-                        <p>Опубликовано: {{ post.published_date }}</p>
-                    </div>
-                    <h1><a href="">{{ post.title }}</a></h1>
-                    <p>{{ post.text|linebreaksbr }}</p>
-                </div>
-            {% endfor %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bent | App Landing Page</title>
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:500,600,700,800,900,400,300' rel='stylesheet' type='text/css'>
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->
+
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Owl Carousel Assets -->
+    <link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'css/owl.theme.css' %}" rel="stylesheet">
+
+
+    <!-- Pixeden Icon Font -->
+    <link rel="stylesheet" href="{% static 'css/Pe-icon-7-stroke.css' %}">
+
+    <!-- Font Awesome -->
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+
+
+    <!-- PrettyPhoto -->
+    <link href="{% static 'css/prettyPhoto.css' %}" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="{% static 'image/x-icon' %}" href="favicon.ico" />
+
+    <!-- Style -->
+    <link href="{% static 'css/style.css' %}"  rel="stylesheet">
+
+    <link href="{% static 'css/animate.css' %}"  rel="stylesheet">
+    <!-- Responsive CSS -->
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <!-- PRELOADER -->
+    <div class="spn_hol">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
         </div>
     </div>
-</div>
 
-    </body>
+ <!-- END PRELOADER -->
+
+ <!-- =========================
+     START ABOUT US SECTION
+============================== -->
+    <section class="header parallax home-parallax page" id="HOME">
+        <h2></h2>
+        <div class="section_overlay">
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <!-- NAV -->
+                            <li><a href="#HOME">СТАРТОВАЯ</a> </li>
+                            <li><a href="#ABOUT">О НАС </a> </li>
+                            <li><a href="#DOWNLOAD">ОПЛАТА </a> </li>
+                            <li><a href="#CONTACT">ОБРАТНАЯ СВЯЗЬ </a> </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container- -->
+            </nav>
+
+            <div class="container home-container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="logo text-center">
+                                <!-- LOGO -->
+                            <img width="125" height="75" src='images/logo.png' alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-sm-8">
+                        <div class="home_text">
+                            <!-- TITLE AND DESC -->
+                            <h1>Хотите арендовать квартиру?<br /> Не хотите переплачивать посредникам?</h1>
+                            <p>Тогда Вы обратились по адресу! Добро пожаловать!</p>
+
+                            <div class="download-btn">
+                            <!-- BUTTON -->
+                                <a class="btn home-btn wow fadeInLeft" href="#DOWNLOAD">Оплатить</a>
+                                <a class="tuor btn wow fadeInRight" href="#ABOUT">Как мы работаем? <i class="fa fa-angle-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-md-offset-1 col-sm-4">
+                        <div class="home-iphone">
+                            <img src="{% static 'images/iPhone_Home.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- END HEADER SECTION -->
+
+
+
+
+ <!-- =========================
+     START ABOUT US SECTION
+============================== -->
+
+
+    <section class="about page" id="ABOUT">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <!-- ABOUT US SECTION TITLE-->
+                    <div class="section_title">
+                        <h2>О нас</h2>
+                        <p>Мой Дилер это телеграмм бот, который поможет Вам в кратчайшие сроки найти и арендовать квартиру вашей мечты.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="inner_about_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="about_phone wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">
+                        <!-- PHONE -->
+                            <img src="{% static 'images/about_iphone.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-6  wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
+                        <!-- TITLE -->
+                        <div class="inner_about_title">
+                            <h2>Почему мы лучший выбор<br> для Вас</h2>
+                            <p>Переезд на новое место жительства это ответсвенный поступок, а мы поможем сделать его еще и максимально простым</p>
+                        </div>
+                        <div class="inner_about_desc">
+
+                            <!-- SINGLE DESC -->
+                            <div class="single_about_area fadeInUp wow" data-wow-duration=".5s" data-wow-delay="1s">
+                                <!-- ICON -->
+                                <div><i class="pe-7s-timer"></i></div>
+                                <!-- HEADING DESCRIPTION -->
+                                <h3>Мы экономим ваше время</h3>
+                                <p>Вы больше не будете тратить свое время на долгие ежедневные просмотры сайтов с объявлениями.</p>
+                            </div>
+                            <!-- END SINGLE DESC -->
+
+
+                            <!-- SINGLE DESC -->
+                            <div class="single_about_area fadeInUp wow" data-wow-duration=".5s" data-wow-delay="1.5s">
+                                <!-- ICON -->
+                                <div><i class="pe-7s-target"></i></div>
+                                <!-- HEADING DESCRIPTION -->
+                                <h3>Присылаем самые актуальные предложения</h3>
+                                <p>Хорошая квартира сдается всреднем за 2.5 часа после публикации объявления. Вы будете первыми кто узнает о новых предложениях.</p>
+                            </div>
+                            <!-- END SINGLE DESC -->
+
+
+                            <!-- SINGLE DESC -->
+                            <div class="single_about_area fadeInUp wow" data-wow-duration=".5s" data-wow-delay="2s">
+                                <!-- ICON -->
+                                <div><i class="pe-7s-stopwatch"></i></div>
+                                <!-- HEADING DESCRIPTION -->
+                                <h3>Ускоряем время поиска квартиры</h3>
+                                <p> Мы поможем найти хорошую квартиру в кратчайшие сроки. При этом сэкономив Ваши деньги, потраченные на оплату услуг риелтора.</p>
+                            </div>
+                            <!-- END SINGLE DESC -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- End About Us -->
+
+
+
+
+ <!-- =========================
+     START TESTIMONIAL SECTION
+============================== -->
+
+      <!-- END TESTIMONIAL SECTION -->
+
+
+
+<!-- =========================
+     START FEATURES
+============================== -->
+
+    <!-- END FEATURES SECTION -->
+
+
+
+<!-- =========================
+     START CALL TO ACTION
+============================== -->
+    <div class="call_to_action">
+        <div class="container">
+            <div class="row wow fadeInLeftBig" data-wow-duration="1s">
+                <div class="col-md-9">
+                    <p>Еще не решились? Мы даем Вам бесплатную возможность посмотреть на работу нашего бота прямо сейчас! Вперед, не теряйте и минуты времени!</p>
+                </div>
+                <div class="col-md-3">
+                    <a class="btn btn-primary btn-action" href="https://t.me/my_dealer_bot" role="button">Попробовать сейчас</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- END CALL TO ACTION -->
+
+
+<!-- =========================
+     Start APPS SCREEN SECTION
+============================== -->
+
+    <!-- ENS APPS SCREEN -->
+
+
+
+
+
+<!-- =========================
+     Start FUN FACTS
+============================== -->
+
+    <!-- END FUN FACTS -->
+
+
+
+
+<!-- =========================
+     START DOWNLOAD NOW
+============================== -->
+    <section class="download page" id="DOWNLOAD">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <!-- DOWNLOAD NOW SECTION TITLE -->
+                    <div class="section_title">
+                        <h2>Оформить подписку на бота прямо сейчас</h2>
+                        <p>Цена подписки 1 грн. Сделай это сейчас!!</p>
+                    </div>
+                    <!--END DOWNLOAD NOW SECTION TITLE -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="download_screen text-center wow fadeInUp" data-wow-duration="1s">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="available_store">
+            <div class="container  wow bounceInRight" data-wow-duration="1s">
+                <div class="col-md-6">
+                    <div class="available_title">
+                        <h2>Кроссплатформенность</h2>
+                        <p>Бот работает на любом устройстве, на котором установлен меседжер Телеграмм</p>
+                    </div>
+                </div>
+
+                <!-- DOWNLOADABLE STORE -->
+                <div class="col-md-6">
+                    <div class="row">
+                        <a href="">
+                            <div class="col-md-4 no_padding">
+                                <div class="single_store">
+                                    <i class="fa fa-apple"></i>
+                                    <div class="store_inner">
+                                        <h2>iOS</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="col-md-4 no_padding">
+                            <a href="">
+                                <div class="single_store">
+                                    <i class="fa fa-android"></i>
+                                    <div class="store_inner">
+                                        <h2>ANDROID</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 no_padding">
+                            <a href="">
+                                <div class="single_store last">
+                                    <i class="fa fa-windows"></i>
+                                    <div class="store_inner">
+                                        <h2>WINDOWS</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- END DOWNLOADABLE STORE -->
+            </div>
+        </div>
+    </section>
+    <!-- END DOWNLOAD -->
+
+<!-- =========================
+     START CONTCT FORM AREA
+============================== -->
+    <section class="contact page" id="CONTACT">
+        <div class="section_overlay">
+            <div class="container">
+                <div class="col-md-10 col-md-offset-1 wow bounceIn">
+                    <!-- Start Contact Section Title-->
+                    <div class="section_title">
+                        <h2>Обратная связь</h2>
+                        <p>Возникли какие то вопросы? Есть предложения по улучшению бота? Обязательно напиши нам!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact_form wow bounceIn">
+                <div class="container">
+
+                <!-- START ERROR AND SUCCESS MESSAGE -->
+                    <div class="form_error text-center">
+                        <div class="name_error hide error">Please Enter your name</div>
+                        <div class="email_error hide error">Please Enter your Email</div>
+                        <div class="email_val_error hide error">Please Enter a Valid Email Address</div>
+                        <div class="message_error hide error">Please Enter Your Message</div>
+                    </div>
+                    <div class="Sucess"></div>
+                <!-- END ERROR AND SUCCESS MESSAGE -->
+
+                <!-- CONTACT FORM starts here, Go to contact.php and add your email ID, thats it.-->
+                    <form role="form" action="contact.php">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="name" placeholder="Name">
+                                <input type="email" class="form-control" id="email" placeholder="Email">
+                                <input type="text" class="form-control" id="subject" placeholder="Subject">
+                            </div>
+
+
+                            <div class="col-md-8">
+                                <textarea class="form-control" id="message" rows="25" cols="10" placeholder="  Message Texts..."></textarea>
+                                <button type="button" class="btn btn-default submit-btn form_submit">SEND MESSAGE</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- END FORM -->
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 wow bounceInLeft">
+                        <div class="social_icons">
+                            <ul>
+                                <li><a href=""><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li><a href=""><i class="fa fa-twitter"></i></a>
+                                </li>
+                                <li><a href=""><i class="fa fa-dribbble"></i></a>
+                                </li>
+                                <li><a href=""><i class="fa fa-behance"></i></a>
+                                </li>
+                                <li><a href=""><i class="fa fa-youtube-play"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END CONTACT -->
+
+<!-- =========================
+     Start Subscription Form
+============================== -->
+
+
+    <!-- END SUBSCRIPBE FORM -->
+
+
+<!-- =========================
+     FOOTER
+============================== -->
+
+    <section class="copyright">
+        <h2></h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copy_right_text">
+                    <!-- COPYRIGHT TEXT -->
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+                    <div class="scroll_top">
+                        <a href="#HOME"><i class="fa fa-angle-up"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END FOOTER -->
+
+
+<!-- =========================
+     SCRIPTS
+============================== -->
+
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.js' %}"></script>
+    <script src="{% static 'js/jquery.fitvids.js' %}"></script>
+    <script src="{% static 'js/smoothscroll.js' %}"></script>
+    <script src="{% static 'js/jquery.parallax-1.1.3.js' %}"></script>
+    <script src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
+    <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'js/jquery.ajaxchimp.langs.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+
+
+</body>
 </html>
