@@ -1,7 +1,8 @@
 {% load staticfiles %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
+    <meta name="interkassa-verification" content="d4a7091e7586d3b36330c88091c46369" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -281,13 +282,34 @@
                 </div>
             </div>
         </div>
-
-        <form id="application" action=" application.php" method="POST" name=" application ">
-        <input name="name" id="applicationName" maxlength="20" placeholder="Введите ваше имя" required />
-      <!--  <input name="email" type="email" id="applicationEmail" maxlength="20" placeholder="Введите ваш E-mail" required />-->
-        <input name="telephone" type="Tel" id="applicationTelephone" maxlength="20" placeholder="Введите ваш телефон" required/>
-        <button class="applicationButton" type="submit" form="application"> Оплатить </button>
+  <!--
+        <form id="application" action="https://lmi.paymaster.ua/LMI_MERCHANT_ID=QdND2Y28ffOsHYHXfGj4g2_5wzU&LMI_PAYMENT_AMOUNT=5&LMI_SIM_MODE=1" method="POST" name=" application ">
+       <input name="name" id="applicationName" maxlength="20" placeholder="Введите ваше имя" required />
+     <input name="email" type="email" id="applicationEmail" maxlength="20" placeholder="Введите ваш E-mail" required />
+        <input name="LMI_PAYER_PHONE_NUMBER" type="Tel" id="applicationTelephone" maxlength="20" placeholder="Введите ваш телефон" required/>
+        <button class="applicationButton"  type="submit" form="application"> Оплатить </button>
         </form>
+
+        <form id="application" action="https://my.paymaster.ua/pay/" method="POST" name=" application ">
+        <input type="hidden" name="IPF_DESTINATION" value="QdND2Y28ffOsHYHXfGj4g2_5wzU" id="IPF_DESTINATION">
+        <input type="hidden" name="IPF_TRANSACTION_AMOUNT" value="5" id="IPF_TRANSACTION_AMOUNT">
+        <input name="IPF_PAYER_EMAIL" type="email" id="applicationEmail" maxlength="20" placeholder="Введите ваш E-mail" required />
+        <input name="IPF_PAYER_PHONE_NUMBER" type="Tel" id="applicationTelephone" maxlength="20" placeholder="Введите ваш телефон" required/>
+        <button class="applicationButton"  type="submit" form="application"> Оплатить </button>
+        </form>-->
+
+        <form id="application" name="application" method="post" action="https://sci.interkassa.com/" enctype="utf-8">
+      	<input type="hidden" name="ik_co_id" value="5a01df413b1eaf233a8b4571" />
+      	<input type="hidden" name="ik_pm_no" value="ID_4233" />
+      	<input type="hidden" name="ik_am" value="10" />
+      	<input type="hidden" name="ik_cur" value="UAH" />
+      	<input type="hidden" name="ik_desc" value="Оплата бота" />
+        <input name="IPF_PAYER_EMAIL" type="email" id="applicationEmail" maxlength="20" placeholder="Введите ваш E-mail" required />
+        <input name="IPF_PAYER_PHONE_NUMBER" type="Tel" id="applicationTelephone" maxlength="20" placeholder="Введите ваш телефон" required/>
+        <button class="applicationButton"  type="submit" form="application"> Оплатить </button>
+      </form>
+
+
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
@@ -297,6 +319,11 @@
                 </div>
             </div>
         </div>
+
+        <form method="post" action="https://my.paymaster.ua/pay/" name="IPF_FORM">
+            <input type="hidden" name="IPF_DESTINATION" value="r7mv8J8g72oEeJea4szId8fhHJ-" id="IPF_DESTINATION">    <input type="hidden" name="IPF_TRANSACTION_AMOUNT" value="5.00" id="IPF_TRANSACTION_AMOUNT">    <button type="submit">Укажите название кнопки </button>
+        </form>
+
 
         <div class="available_store">
             <div class="container  wow bounceInRight" data-wow-duration="1s">
