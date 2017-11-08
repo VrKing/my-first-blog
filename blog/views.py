@@ -18,9 +18,9 @@ def post_list(request):
     return render(request, 'blog/pay.html')"""
 
 def good_pay(request):
-    
+
     if 'q' in request.GET:
-        message = 'You searched for: %r %s' % (request.GET['q'],data_sms[0][0])
+        message = 'You searched for: %r' % (request.GET['q'])
     else:
         message = 'You submitted an empty form.'
     return HttpResponse(message)
