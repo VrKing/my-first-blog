@@ -7,9 +7,6 @@ from .models import Post
 
 
 
-
-
-
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog/post_list.html', {'posts': posts})
@@ -20,7 +17,7 @@ def post_list(request):
 def good_pay(request):
 
     if 'q' in request.GET:
-        message = 'You searched for: %r' % (request.GET['q'])
+        message = 'You searched for: %r ' % (request.GET['q'])
     else:
         message = 'You submitted an empty form.'
     return HttpResponse(message)

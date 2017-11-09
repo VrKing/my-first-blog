@@ -41,6 +41,15 @@
     <link href="{% static 'css/mybut.css' %}" rel="stylesheet">
     <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
 
+    <link href='https://fonts.googleapis.com/css?family=Homemade+Apple' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Sahitya:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/component.css' %}" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -277,7 +286,7 @@
                     <div class="section_title">
                         <h2>Оформить подписку на бота прямо сейчас</h2>
 
-                        <p> <FONT size=12> <b> 79  грн / 31 день </b> </FONT> </p>
+                    <!--    <p> <FONT size=12> <b> 79  грн / 31 день </b> </FONT> </p>-->
                     </div>
                 </div>
             </div>
@@ -296,7 +305,7 @@
         <input name="IPF_PAYER_EMAIL" type="email" id="applicationEmail" maxlength="20" placeholder="Введите ваш E-mail" required />
         <input name="IPF_PAYER_PHONE_NUMBER" type="Tel" id="applicationTelephone" maxlength="20" placeholder="Введите ваш телефон" required/>
         <button class="applicationButton"  type="submit" form="application"> Оплатить </button>
-        </form>-->
+        </form>
 
         <form id="application" name="application" method="post" action="https://sci.interkassa.com/" enctype="utf-8">
       	<input type="hidden" name="ik_co_id" value="5a01df413b1eaf233a8b4571" />
@@ -318,7 +327,64 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
+
+        <section class="pricing-section bg-5">
+
+              <div class="pricing pricing--yama">
+                  <div class="pricing__item">
+                      <h3 class="pricing__title">Тестовый <br />тариф</h3>
+                      <p class="pricing__sentence"> </p>
+                      <div class="pricing__price">49 грн.<span class="pricing__period"> </div>
+                      <ul class="pricing__feature-list">
+                          <li class="pricing__feature">Подписка на 14 дней</li>
+                          <li class="pricing__feature">25 объявлений в день</li>
+                            <li class="pricing__feature">Полная информация об объектах </li><br />
+                      </ul>
+
+                      <form id="my-tel">
+                      <input name="IPF_PAYER_PHONE_NUMBER" type="Tel" id="tel1" maxlength="11" placeholder="📱 8(XXX) XXX-XXXX"   required/>
+                    </form >
+                    <center><input name="option2" type="checkbox"  class="applicationcheckbox" form="application" required/>  <a href="https://docs.google.com/document/d/1aIAT3Qa6EZTseiqxYu-IOwcIDXpOflvjgny4sE1tvVc/edit?usp=sharing"  target="_blank">Я согласен с правилами сайта </a></center>
+                      <button class="pricing__action">Оплатить</button>
+                  </div>
+                  <div class="pricing__item">
+                      <h3 class="pricing__title">Стандартный тариф</h3>
+                      <p class="pricing__sentence"> </p>
+                      <div class="pricing__price">79 грн.<span class="pricing__period"> </div>
+                      <ul class="pricing__feature-list">
+                          <li class="pricing__feature">Подписка на 30 дней</li>
+                          <li class="pricing__feature">25 объявлений в день</li>
+                          <li class="pricing__feature">Полная информация об объектах </li><br />
+
+                      </ul>
+                      <form id="my-tel">
+                      <input name="IPF_PAYER_PHONE_NUMBER" type="Tel" id="tel1" maxlength="11" placeholder="📱 8(XXX) XXX-XXXX"   required/>
+                    </form >
+                    <center><input name="option2" type="checkbox"  class="applicationcheckbox" form="application" required/>  <a href="https://docs.google.com/document/d/1aIAT3Qa6EZTseiqxYu-IOwcIDXpOflvjgny4sE1tvVc/edit?usp=sharing"  target="_blank">Я согласен с правилами сайта </a></center>
+                      <button class="pricing__action">Оплатить</button>
+                  </div>
+                  <div class="pricing__item">
+                      <h3 class="pricing__title">Продвинутый тариф </h3>
+                      <p class="pricing__sentence"> </p>
+                      <div class="pricing__price"> 129 грн.<span class="pricing__period"> </div>
+                      <ul class="pricing__feature-list">
+                          <li class="pricing__feature">Подписка на 30 дней</li>
+                          <li class="pricing__feature">25 объявлений в день</li>
+                          <li class="pricing__feature">Полная информация об объектах</li>
+                          <li class="pricing__feature">База обьявлений 1 раз/день (файл Excel)</li>
+
+                      </ul>
+                      <form id="my-tel">
+                      <input name="IPF_PAYER_PHONE_NUMBER" type="Tel" id="tel1" maxlength="11" placeholder="📱 8(XXX) XXX-XXXX"   required/>
+                    </form >
+                    <center><input name="option2" type="checkbox"  class="applicationcheckbox" form="application" required/>  <a href="https://docs.google.com/document/d/1aIAT3Qa6EZTseiqxYu-IOwcIDXpOflvjgny4sE1tvVc/edit?usp=sharing"  target="_blank">Я согласен с правилами сайта </a></center>
+                      <button class="pricing__action">Оплатить</button>
+                  </div>
+              </div>
+          </section>
+
+
 
         <!--  <form method="post" action="https://my.paymaster.ua/pay/" name="IPF_FORM">
             <input type="hidden" name="IPF_DESTINATION" value="r7mv8J8g72oEeJea4szId8fhHJ-" id="IPF_DESTINATION">    <input type="hidden" name="IPF_TRANSACTION_AMOUNT" value="5.00" id="IPF_TRANSACTION_AMOUNT">    <button type="submit">Укажите название кнопки </button>
