@@ -76,7 +76,7 @@
 
 
 
-#my-tel input[type="Tel"] {
+#application1 input[type="Tel"] {
   font-weight: bold;
   margin: 0 2em;
   padding: 1em 2em;
@@ -89,6 +89,50 @@
   left: 25%;
   top: 35%;
 }
+
+
+::placeholder {
+    color: #5e695f;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+    text-align: center;
+}
+
+#application2 input[type="Tel"] {
+  font-weight: bold;
+  margin: 0 2em;
+  padding: 1em 2em;
+  border-radius: 2px;
+
+  background: rgba(255, 255, 255, 1);
+
+  color: #080707;
+  width: 83%;
+  left: 25%;
+  top: 35%;
+}
+
+
+::placeholder {
+    color: #5e695f;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+    text-align: center;
+}
+
+#application3 input[type="Tel"] {
+  font-weight: bold;
+  margin: 0 2em;
+  padding: 1em 2em;
+  border-radius: 2px;
+
+  background: rgba(255, 255, 255, 1);
+
+  color: #080707;
+  width: 83%;
+  left: 25%;
+  top: 35%;
+}
+
+
 ::placeholder {
     color: #5e695f;
     text-shadow: 0 1px 1px rgba(0, 0, 0, .3);

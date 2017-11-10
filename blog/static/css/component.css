@@ -349,6 +349,7 @@
 	padding: 1em 2em;
 	border-radius: 4px;
 	background: #ef7d46;
+	width: 83%;
 	-webkit-transition: background-color 0.3s, color 0.3s;
 	transition: background-color 0.3s, color 0.3s;
 }

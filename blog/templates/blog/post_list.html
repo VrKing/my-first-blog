@@ -333,7 +333,7 @@
 
               <div class="pricing pricing--yama">
                   <div class="pricing__item">
-                      <h3 class="pricing__title">Тестовый <br />тариф</h3>
+                      <h3 class="pricing__title">Basic</h3>
                       <p class="pricing__sentence"> </p>
                       <div class="pricing__price">49 грн.<span class="pricing__period"> </div>
                       <ul class="pricing__feature-list">
@@ -341,15 +341,20 @@
                           <li class="pricing__feature">25 объявлений в день</li>
                             <li class="pricing__feature">Полная информация об объектах </li><br />
                       </ul>
-
-                      <form id="my-tel">
-                      <input name="IPF_PAYER_PHONE_NUMBER" type="Tel" id="tel1" maxlength="11" placeholder="+38(XXX) XXX-XXXX"   required/>
-                    </form >
-                    <center><input name="option2" type="checkbox"  class="applicationcheckbox" form="application" required/>  <a href="https://docs.google.com/document/d/1aIAT3Qa6EZTseiqxYu-IOwcIDXpOflvjgny4sE1tvVc/edit?usp=sharing"  target="_blank">Я согласен с правилами сайта </a></center>
-                      <button class="pricing__action">Оплатить</button>
+                        <form id="application1" name="application" method="post" action="https://sci.interkassa.com/" enctype="utf-8">
+                            <input type="hidden" name="ik_co_id" value="5a01df413b1eaf233a8b4571" />
+                            <input type="hidden" name="ik_pm_no" value="ID_4233" />
+                            <input type="hidden" name="ik_am" value="10" />
+                            <input type="hidden" name="ik_cur" value="UAH" />
+                            <input type="hidden" name="ik_desc" value="Оплата бота" />
+                            <input name="IPF_PAYER_PHONE_NUMBER" type="Tel" id="tel1" maxlength="11" placeholder="+38(XXX) XXX-XXXX"   required/>
+                            <center><input name="option2" type="checkbox"  class="applicationcheckbox" form="application1" required/>  <a href="https://docs.google.com/document/d/1aIAT3Qa6EZTseiqxYu-IOwcIDXpOflvjgny4sE1tvVc/edit?usp=sharing"  target="_blank">Я согласен с правилами сайта </a></center>
+                            <button class="pricing__action" type="submit" form="application1">Оплатить</button>
+                        </form>
                   </div>
+
                   <div class="pricing__item">
-                      <h3 class="pricing__title">Стандартный тариф</h3>
+                      <h3 class="pricing__title">Standard</h3>
                       <p class="pricing__sentence"> </p>
                       <div class="pricing__price">79 грн.<span class="pricing__period"> </div>
                       <ul class="pricing__feature-list">
@@ -358,28 +363,38 @@
                           <li class="pricing__feature">Полная информация об объектах </li><br />
 
                       </ul>
-                      <form id="my-tel">
-                      <input name="IPF_PAYER_PHONE_NUMBER" type="Tel" id="tel1" maxlength="11" placeholder="+38(XXX) XXX-XXXX"   required/>
-                    </form >
-                    <center><input name="option2" type="checkbox"  class="applicationcheckbox" form="application" required/>  <a href="https://docs.google.com/document/d/1aIAT3Qa6EZTseiqxYu-IOwcIDXpOflvjgny4sE1tvVc/edit?usp=sharing"  target="_blank">Я согласен с правилами сайта </a></center>
-                      <button class="pricing__action">Оплатить</button>
+                      <form id="application2" name="application" method="post" action="https://sci.interkassa.com/" enctype="utf-8">
+                          <input type="hidden" name="ik_co_id" value="5a01df413b1eaf233a8b4571" />
+                          <input type="hidden" name="ik_pm_no" value="ID_4233" />
+                          <input type="hidden" name="ik_am" value="20" />
+                          <input type="hidden" name="ik_cur" value="UAH" />
+                          <input type="hidden" name="ik_desc" value="Оплата бота" />
+                          <input name="IPF_PAYER_PHONE_NUMBER" type="Tel" id="tel1" maxlength="11" placeholder="+38(XXX) XXX-XXXX"   required/>
+                          <center><input name="option2" type="checkbox"  class="applicationcheckbox" form="application2" required/>  <a href="https://docs.google.com/document/d/1aIAT3Qa6EZTseiqxYu-IOwcIDXpOflvjgny4sE1tvVc/edit?usp=sharing"  target="_blank">Я согласен с правилами сайта </a></center>
+                          <button class="pricing__action" type="submit" form="application2">Оплатить</button>
+                      </form>
                   </div>
                   <div class="pricing__item">
-                      <h3 class="pricing__title">Продвинутый тариф </h3>
+                      <h3 class="pricing__title">Premium</h3>
                       <p class="pricing__sentence"> </p>
                       <div class="pricing__price"> 129 грн.<span class="pricing__period"> </div>
                       <ul class="pricing__feature-list">
                           <li class="pricing__feature">Подписка на 30 дней</li>
                           <li class="pricing__feature">25 объявлений в день</li>
                           <li class="pricing__feature">Полная информация об объектах</li>
-                          <li class="pricing__feature">База обьявлений 1 раз/день (файл Excel)</li>
+                          <li class="pricing__feature">База объявлений 1 раз/день (файл Excel)</li>
 
                       </ul>
-                      <form id="my-tel">
-                      <input name="IPF_PAYER_PHONE_NUMBER" type="Tel" id="tel1" maxlength="11" placeholder="+38(XXX) XXX-XXXX"   required/>
-                    </form >
-                    <center><input name="option2" type="checkbox"  class="applicationcheckbox" form="application" required/>  <a href="https://docs.google.com/document/d/1aIAT3Qa6EZTseiqxYu-IOwcIDXpOflvjgny4sE1tvVc/edit?usp=sharing"  target="_blank">Я согласен с правилами сайта </a></center>
-                      <button class="pricing__action">Оплатить</button>
+                      <form id="application3" name="application" method="post" action="https://sci.interkassa.com/" enctype="utf-8">
+                          <input type="hidden" name="ik_co_id" value="5a01df413b1eaf233a8b4571" />
+                          <input type="hidden" name="ik_pm_no" value="ID_4233" />
+                          <input type="hidden" name="ik_am" value="10" />
+                          <input type="hidden" name="ik_cur" value="UAH" />
+                          <input type="hidden" name="ik_desc" value="Оплата бота" />
+                          <input name="IPF_PAYER_PHONE_NUMBER" type="Tel" id="tel1" maxlength="11" placeholder="+38(XXX) XXX-XXXX"   required/>
+                          <center><input name="option2" type="checkbox"  class="applicationcheckbox" form="application3" required/>  <a href="https://docs.google.com/document/d/1aIAT3Qa6EZTseiqxYu-IOwcIDXpOflvjgny4sE1tvVc/edit?usp=sharing"  target="_blank">Я согласен с правилами сайта </a></center>
+                          <button class="pricing__action" type="submit" form="application3">Оплатить</button>
+                      </form>
                   </div>
               </div>
           </section>
