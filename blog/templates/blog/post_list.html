@@ -485,7 +485,7 @@
                 <!-- END ERROR AND SUCCESS MESSAGE -->
 
                 <!-- CONTACT FORM starts here, Go to contact.php and add your email ID, thats it.-->
-                    <form role="form" action="contact.php">
+                    <!--  <form role="form">
                         <div class="row">
                             <div class="col-md-4">
                                 <input type="text" class="form-control" id="name" placeholder="Name">
@@ -500,11 +500,44 @@
                             </div>
                         </div>
                     </form>
-                    <!-- END FORM -->
+                   END FORM -->
+                   <form role="form" method="post" id="cont" action="http://mydealer.in.ua/form" >
+                       <div class="row">
+                           <div class="col-md-4">
+                               <input type="text" class="form-control" id="name" placeholder="Name">
+                               <input type="email" class="form-control" id="email" placeholder="Email">
+                               <input type="text" class="form-control" id="subject" placeholder="Subject">
+                           </div>
+
+
+                           <div class="col-md-8">
+                               <textarea class="form-control" id="message" rows="25" cols="10" placeholder="  Message Texts..."></textarea>
+                               <button type="submit"  form="cont" class="btn btn-default submit-btn form_submit2">SEND MESSAGE</button>
+                           </div>
+                       </div>
+                   </form>
+
+<!--
+                   <form id="application2" name="application" method="post" action="https://sci.interkassa.com/" enctype="utf-8">
+                       <input type="hidden" name="ik_co_id" value="5a01df413b1eaf233a8b4571" />
+                       <input type="hidden" name="ik_pm_no" value="ID_79" />
+                       <input type="hidden" name="ik_am" value="79" />
+                       <input type="hidden" name="ik_cur" value="UAH" />
+                       <input type="hidden" name="ik_desc" value="Оплата подписки" />
+                       <input name="ik_x_tel" type="Tel" id="tel1" maxlength="13" placeholder="+38(XXX) XXX-XXXX"   required/>
+                       <center><input name="option2" type="checkbox"  class="applicationcheckbox" form="application2" required/>  <a href="https://docs.google.com/document/d/1aIAT3Qa6EZTseiqxYu-IOwcIDXpOflvjgny4sE1tvVc/edit?usp=sharing"  target="_blank">Я согласен с правилами сайта </a></center>
+                       <button class="pricing__action" type="submit" form="application2">Оплатить</button>
+                   </form>-->
+
+
+
+
+
+
                 </div>
             </div>
 
-            <div class="container">
+           <div class="container">
                 <div class="row">
                     <div class="col-md-12 wow bounceInLeft">
                         <div class="social_icons">
@@ -526,7 +559,7 @@
             </div>
         </div>
     </section>
-    <!-- END CONTACT -->
+    <!--  END CONTACT -->
 
 <!-- =========================
      Start Subscription Form
